@@ -24,8 +24,8 @@ nav img {
 }
 
 .txt-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 0px;
     padding-right: 90px;
 }
@@ -66,3 +66,92 @@ a {
     height: 0vw;
     width: auto;
 }
+
+.bloc-gris {
+    background: #313131;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 4em;
+    font-size: 16px;
+    align-items: flex-start;
+  }
+  
+  footer {
+    font-size: 14px;
+    position: relative;
+    color: white;
+  }
+  
+  footer a {
+    color: white;
+  }
+  
+  /* Social network logos from the footer */
+  .logo-line {
+    margin-top: 15px;
+  }
+  
+  .logo-line img {
+    width: 2em;
+    padding: 8px;
+  }
+  /* Boutons du footer */
+  .double-buttons {
+    margin-top: 2em;
+  }
+  
+  /* configuration du premier bouton du footer  */
+  .button1 a {
+    border: solid white;
+    background: white;
+    padding-left: 19px;
+    padding-right: 19px;
+    color: black;
+    text-align: center;
+  }
+  
+  /* configuration du deuxième bouton du footer  */
+  .button2 a {
+    border: solid #e74a34;
+    background: #e74a34;
+    padding-left: 19px;
+    padding-right: 19px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* CSS pour toute les colonnes du footer */
+  .column1 {
+    flex: 1;
+    padding-right: 2em;
+  }
+  
+  .column2 {
+    flex: 1;
+  }
+  
+  .column3 {
+    flex: 1;
+  }
+  
+  .column4 {
+    flex: 1;
+  }
+  
+  .column4 a {
+    color: white;
+    border: solid white;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .column4 img {
+    padding-top: 3em;
+  }
