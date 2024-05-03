@@ -1,0 +1,68 @@
+body {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgb(37, 37, 37);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid black;
+    background-color: black;
+    color: white;
+}
+
+nav img {
+    padding: 10px;
+    width:20vw ;
+}
+
+.txt-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 90px;
+}
+
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: #FEA2E7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.both-images {
+    display: flex;
+}
+
+
+.right-slide, .left-slide {
+    flex:1; 
+    height: 70vw;
+    width: auto;
+}
+
+
+.left-slide {
+    flex:1; 
+    height: 70vw;
+    width: auto;
+}
+
+.right-slide {
+    flex:1; 
+    height: 0vw;
+    width: auto;
+}
