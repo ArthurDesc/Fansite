@@ -43,32 +43,28 @@ a {
     text-decoration: none;
 }
 
-.container img {
-    display: flex;
-}
 
 .both-images {
     display: flex;
+    justify-content: space-between;
 }
 
-.right-slide, .left-slide {
-    flex:1; 
-    height: 70vw;
-    width: auto;
+.imagefr {
+    width: 45vw;
+    height: auto;
+    justify-content: left;
 }
 
-.left-slide img {
-    width: 10%;
+
+
+
+.imageus {
+    width: 45vw;
+    height: auto;
+    margin-right: 0;
 }
 
-.right-slide img {
-    witdh
 
-.right-slide {
-    flex:1; 
-    height: 0vw;
-    width: auto;
-}
 
 
 
