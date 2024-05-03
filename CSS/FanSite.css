@@ -9,6 +9,11 @@ body {
     width: 100%;
 }
 
+.container {
+    position: relative;
+
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -50,19 +55,27 @@ a {
 }
 
 .imagefr {
-    width: 45vw;
+    width: 49vw;
     height: auto;
     justify-content: left;
 }
 
 
-
-
 .imageus {
-    width: 45vw;
+    width: 48vw;
     height: auto;
-    margin-right: 0;
+    margin-left: auto; 
 }
+
+.intitule {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre le texte */
+    z-index: 1; /* Assure que le texte est superposé aux images */
+}
+
+
 
 
 
@@ -160,3 +173,8 @@ footer a {
     padding-top: 3em;
 }
 /* FOOTER */
+
+
+
+
+
