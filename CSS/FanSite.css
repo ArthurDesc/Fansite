@@ -92,6 +92,55 @@ a {
 
 
 
+/* PAGE FR */
+
+
+.radius-photos {
+    text-align: center;
+}
+
+
+.first-line-fr, .second-line-fr {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.freeze-corleone {
+    text-align: center;
+    margin: 0 10;
+}
+
+
+.freeze-corleone p {
+    margin-top: 5px;
+}
+
+
+
+.radius-photos img {
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+/* PAGE FR */
+
+
+
+
+
+
+
+
+
+
 
 
 
