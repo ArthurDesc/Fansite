@@ -102,8 +102,10 @@ a {
 
 .first-line-fr, .second-line-fr {
     display: flex;
-    justify-content: center;
+    justify-content: space-between  ;
     margin-bottom: 20px;
+    padding: 2em 5em ;
+    color: white;
 }
 
 
@@ -117,10 +119,21 @@ a {
     margin-top: 5px;
 }
 
+.laylow {
+    text-align: center;
+    margin: 0 10;
+}
+
+
+.laylow p {
+    margin-top: 5px;
+}
 
 
 .radius-photos img {
     border-radius: 100%;
+    width: 200px;
+    height: auto;
 }
 
 
