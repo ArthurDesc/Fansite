@@ -11,16 +11,16 @@ body {
 
 .container {
     position: relative;
-
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid black;
+    border: solid none;
     background-color: black;
     color: white;
+    width: 100%;
 }
 
 nav img {
@@ -46,6 +46,7 @@ nav a:hover {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 .both-images {
@@ -90,9 +91,19 @@ a {
     height: 100%;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+}
+
+h1:hover {
+    color: #FEA2E7;
+}
 
 
-/* PAGE FR */
+/* PAGE FR ET US */
 
 
 .radius-photos {
@@ -136,6 +147,61 @@ a {
     height: auto;
 }
 
+/* PAGE FR ET US */
+
+
+
+/* PAGE NEWS */
+.bloc-actu {
+    margin-bottom: 2vw;
+    margin-top: 5vw;
+}
+
+.bloc-actu img {
+    transition: transform 0.3s ease; /* Ajout de transition pour un effet de survol fluide */
+    border-radius: 10%;
+    width: 350px;
+    height:auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.bloc-actu img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+}
+
+
+.bloc:hover {
+    color: #FEA2E7;
+
+}
+
+.first-line-news, .second-line-news {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+}
+
+
+.bloc {
+    border: solid rgb(26, 26, 26);
+    background-color: rgb(26, 26, 26);
+    border-radius: 10%;
+    padding: 20px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.videos {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    margin: 60px 0;
+    width: 100%;
+    height: auto;
+}
 
 
 
@@ -143,13 +209,8 @@ a {
 
 
 
-/* PAGE FR */
 
-
-
-
-
-
+/* PAGE NEWS */
 
 
 
@@ -192,5 +253,4 @@ footer {
     height:auto;
 }
 /* FOOTER */
-
 
