@@ -1,26 +1,9 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
-    <link rel="stylesheet" href="../CSS/FanSite.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+<?php include('./includes/head_.php'); ?>
+
 <body>
-    <header>
-        <nav>
-          <a href="./index.html"><img class="logo" src="../IMAGE/EDIT/rap verse 6.png" alt=""></a> 
-            
-            
-            <a class="txt-header" href="./index.html"><p>Accueil</p></a>
-            <a class="txt-header" href="./news.html"><p>News</p></a>
-            <a class="txt-header" href="./rap fr.html"><p>Rap FR</p></a>
-            <a class="txt-header" href="./rap us.html"><p>Rap US</p></a>
-            <a class="txt-header" href="./contact.html"><p>Contact</p></a>
-        </nav>
-    </header>
+<?php include('./includes/header_.php');?>
+
 
 
           
@@ -101,28 +84,7 @@
         </main>
         
         
-      <footer>
-            
-        <div class="bloc-gris">  <!-- Bloc gris du footer -->
-
-            <!-- 4 Colonnes du footer -->
-          
-            <div class="column2">
-              <div class="logo-line">
-                <a href=""><img src="../IMAGE/6636566_instagram_social media_social network_icon.png" alt=""></a>
-                <a href="https://www.paypal.com/fr/home"><img src="../IMAGE/2062083_paypal_ecommerce_logo_payment_shopping_icon.png" alt=""></a>
-                <a href="https://www.twitch.tv/derroce_"><img src="../IMAGE/4590799_circle_logo_media_network_social_icon.png" alt=""></a>
-              </div>
-              
-              <p>Infos & Pratiques</p>
-              
-              <img class="logo-footer" src="../Image/rap verse 2.png" alt="logo-plateforme">
-            </div>
-                
-         
-        </div>
-        
-      </footer>
+        <?php include('./includes/footer_.php');?>
     
 </body>
 </html>
