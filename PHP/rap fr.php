@@ -1,3 +1,5 @@
+<?php $title = "Rap FR";?>
+
 <html lang="en">
 <?php include('./includes/head_.php'); ?>
 

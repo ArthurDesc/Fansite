@@ -1,8 +1,7 @@
+<?php $title = "Contact";?>
 <html lang="en">
+
 <?php include('./includes/head_.php'); ?>
-
-
-
 
 <body>
     <?php include('./includes/header_.php');?>

@@ -1,11 +1,12 @@
+<?php $title = "Se connecter";?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php include('./includes/head_.php'); ?>
+
 <body>
+<?php include('./includes/header_.php');?>
     <a href="./index.php">Accueil</a>
     <form action="register.php" metho="post">
         <h1>Se connecter</h1>
@@ -18,6 +19,9 @@
 
         <input type="submit" value="Se connecter">
     </form>
+
+    <?php include('./includes/footer_.php');?>
+
     
 </body>
 </html>

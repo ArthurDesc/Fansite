@@ -1,3 +1,6 @@
+<?php $title = "Accueil";?>
+
+
 <html lang="en">
 <?php include('./includes/head_.php'); ?>
 
