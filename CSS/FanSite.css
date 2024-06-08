@@ -427,6 +427,8 @@ footer {
 .login-form {
     max-width: 400px;
     margin: 0 auto;
+    text-align: center;
+    display: block;
 }
 
 .login-form h1 {
@@ -450,6 +452,7 @@ footer {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 20px;
 }
 
 .login-form input[type="submit"]:hover {
@@ -471,6 +474,9 @@ footer {
 .alreadyLog {
     color: #FEA2E7;
     text-decoration: underline;
+    text-align: center;
+    display: block;
+    margin: 3vw 0;
 }
 
 .alreadyLog:hover {
@@ -480,6 +486,6 @@ footer {
 /* REGISTER */
 
 /* PROFIL */
-    
+
 
 /* PROFIL */

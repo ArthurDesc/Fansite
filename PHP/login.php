@@ -84,6 +84,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "<p class=log_message'>" . $message . "</p>"; 
     }
     ?>
+
+<a href="./register.php" class="alreadyLog">Vous n'êtes pas encore inscrit ?</a>
+
 </div>
 
     <?php include('./includes/footer_.php');?>
