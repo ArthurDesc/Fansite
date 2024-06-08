@@ -5,22 +5,23 @@ session_start();
 
 // CONNECTING TO DB
 // CHECKING IF THE METHOD IS POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-    $mail = $_POST['mail'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { // '?' SI VRAI ET ':' SI FAUSSE
+    $login = isset($_POST['login']) ? $_POST['login'] : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $confirm_password = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : '';
+    $mail = isset($_POST['mail']) ? $_POST['mail'] : '';
 
     // Expression régulière pour valider l'adresse email
     $pattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
 
     if (!preg_match($pattern, $mail)) {
-        $error_message = "<p class='.text-danger'>Adresse mail non valide</p>";
+        $error_message = "<p class='error-message'>*Adresse mail non valide</p>";
     } elseif ($confirm_password !== $password) {
         $error_message = "Les mots de passe ne correspondent pas";
     } else {
         $password = password_hash($password, PASSWORD_BCRYPT); // SECURISE LE MDP EN BCRYPT
         $mysqli = mysqli_connect('localhost', 'root', '', 'rap_verse');
+        $error_message = "";
 
         if (!$mysqli) {
             die("Could not connect: " . mysqli_connect_error());
@@ -50,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <?php include('./includes/head_.php'); ?>
 <body>
 <?php include('./includes/header_.php'); ?>
-    <a href="./index.php">Accueil</a>
     <form action="register.php" method="post" class="login-form"> <!-- Ajoutez la classe login-form pour appliquer les styles -->
         <h1>S'inscrire</h1>
         <br />  
@@ -69,6 +69,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         ?>
     </form>
+    <a href="./login.php" class="alreadyLog">Vous êtes déjà inscrit ?</a>
+
+
 <?php include('./includes/footer_.php'); ?>
 </body>
 </html>

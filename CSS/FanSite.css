@@ -53,6 +53,10 @@ nav a:hover {
     color: #FEA2E7;
 }
 
+.character {
+    display: flex;
+}
+
 /* HEADER */
 
 
@@ -349,6 +353,8 @@ h2 {
 footer {
     font-size: 14px;
     color: white;
+    margin-top: 6vw;
+    margin-bottom: 0vw;
 }
 
 .column2 {
@@ -444,7 +450,6 @@ footer {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 5vw;
 }
 
 .login-form input[type="submit"]:hover {
@@ -459,7 +464,22 @@ footer {
 
 .error-message {
     color: red;
-    font-size: 14px;
+    font-size: 17px;
     /* Ajoutez d'autres styles selon vos préférences */
 }
+
+.alreadyLog {
+    color: #FEA2E7;
+    text-decoration: underline;
+}
+
+.alreadyLog:hover {
+    color: white;
+    text-decoration: none;
+}
 /* REGISTER */
+
+/* PROFIL */
+    
+
+/* PROFIL */
