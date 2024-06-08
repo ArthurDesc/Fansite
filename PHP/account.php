@@ -1,11 +1,19 @@
+<?php $title = "Compte";?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php include('./includes/head_.php'); ?>
+
 <body>
+<?php include('./includes/header_.php');?>
     
+<section class="buttonAccount">
+    <a class="button_login" href="./login.php">Se connecter</a>
+    <a class="button_register" href="./register.php">S'inscrire</a>
+</section>
+
+
+
+<?php include('./includes/footer_.php');?>
 </body>
 </html>

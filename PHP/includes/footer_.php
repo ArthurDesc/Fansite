@@ -13,7 +13,7 @@
             
             <p>Infos & Pratiques</p>
             
-            <img class="logo-footer" src="../Image/rap verse 2.png" alt="logo-plateforme">
+            <img class="logo-footer" src="/fansite/Image/rap verse 2.png" alt="logo-plateforme">
           </div>
               
        

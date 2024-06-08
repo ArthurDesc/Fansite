@@ -1,5 +1,5 @@
 <?php 
-$title = "Se connecter"; // TITRE DE LA PAGE
+$title = "S'inscrire"; // TITRE DE LA PAGE
 
 session_start();
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: ./login.php");
             exit(); // Assurez-vous de quitter après la redirection
         } else {
-            $error_message = "Erreur lors de l'inscription: " . mysqli_error($mysqli);
+            $error_message = "Erreur lors de l'inscription:" . mysqli_error($mysqli);
         }
 
         // Fermer la connexion
@@ -48,11 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <?php include('./includes/head_.php'); ?>
-
 <body>
 <?php include('./includes/header_.php'); ?>
     <a href="./index.php">Accueil</a>
-    <form action="register.php" method="post">
+    <form action="register.php" method="post" class="login-form"> <!-- Ajoutez la classe login-form pour appliquer les styles -->
         <h1>S'inscrire</h1>
         <br />  
         <input type="text" name="login" placeholder="Pseudo" required>
@@ -65,11 +64,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br />
         <input type="submit" value="S'inscrire">
         <?php 
-        if (isset($error_message)) {
-            echo "<p>$error_message</p>";
+        if (!empty($error_message)) {
+            echo "<p class='error-message'>" . $error_message . "</p>"; // Utilisez la classe error-message pour appliquer les styles d'erreur
         }
         ?>
     </form>
 <?php include('./includes/footer_.php'); ?>
 </body>
 </html>
+
