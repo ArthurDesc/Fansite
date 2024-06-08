@@ -32,7 +32,7 @@
 
                       <div class="future">
                         <a href=""><img src="../IMAGE/future.jpg" alt=""></a>
-                        <p>future</p>
+                        <p>Future</p>
                       </div>
 
                   </div>

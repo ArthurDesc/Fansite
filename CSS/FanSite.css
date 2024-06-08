@@ -37,11 +37,49 @@ nav img {
     width:12vw ;
 }
 
-.txt-header {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 0px;
-    padding-right: 90px;
+.headerList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.headerList ul {
+    display: none; /* Cacher les sous-menus par défaut */
+    position: absolute; /* Positionner les sous-menus de manière absolue */
+    background-color: black; /* Couleur de fond des sous-menus */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.headerList li:hover > ul {
+    display: block; /* Afficher les sous-menus lorsque l'utilisateur survole l'élément parent */
+}
+
+.headerList li {
+    position: relative;   
+}
+
+.headerList li ul li {
+    display: block;
+}
+
+
+
+.firstList {
+    padding: 10px 20px; /* Définir la position relative pour les éléments parents */
+    position: relative;
+}
+
+
+.firstList:hover {
+    text-decoration: underline;
+}
+
+
+.txt-hader {
+    padding: 0.1px;
+    margin: 0;
 }
 
 
@@ -55,7 +93,22 @@ nav a:hover {
 
 .character {
     display: flex;
+    align-items: center;
+    margin: 0 1.5vw;
 }
+
+.headerMessageContainer {
+    margin-right: 10px; /* Ajustez la marge selon vos besoins */
+}
+
+.characterLogo {
+    width: 2vw;
+    height: 2vw;
+    transition: fill 0.3s; /* Transition fluide pour la couleur */
+
+}
+
+
 
 /* HEADER */
 
@@ -389,7 +442,7 @@ footer {
     place-items: center;
     height: 30vh;
     margin: 3vw 0vw;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
@@ -455,10 +508,36 @@ footer {
     margin: 20px;
 }
 
+
 .login-form input[type="submit"]:hover {
     background-color: black;
     color: #FEA2E7;
 }
+
+.adminButton {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block; /* Changer de block à inline-block */
+    margin: 0 auto;
+    border: none; /* Ajuster pour éviter un éventuel problème de bordure */
+    background-color: black;
+    padding: 10px 20px; /* Ajuster les unités pour une meilleure lisibilité */
+    border-radius: 5px;
+}
+
+.adminButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+.adminButton:hover {
+    color: #FEA2E7;
+}
+
 
 /* LOGIN */
 
