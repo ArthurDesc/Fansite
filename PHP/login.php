@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_name'] = $user_data['prenom'];
             $_SESSION['user_login'] = $user_data['login'];
             
-            header("Location: index.php");
+            header("Location: profil.php");
             exit;
             
             // Redirige vers la page profil

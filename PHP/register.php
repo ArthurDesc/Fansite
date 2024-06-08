@@ -33,8 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // '?' SI VRAI ET ':' SI FAUSSE
         // Exécuter la requête SQL
         $result = mysqli_query($mysqli, $sql);
 
+
+
         if ($result) {
-            header("Location: ./login.php");
+            header("Location: ./profil.php");
             exit(); // Assurez-vous de quitter après la redirection
         } else {
             $error_message = "Erreur lors de l'inscription:" . mysqli_error($mysqli);
