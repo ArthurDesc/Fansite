@@ -30,6 +30,8 @@
                               </div>
                           </a>
                         </div>
+
+                        
                         
                         
                         <div class="right-side">
@@ -47,6 +49,8 @@
         
         
         <?php include('./includes/footer_.php');?>
+
+
     
 </body>
 </html>
