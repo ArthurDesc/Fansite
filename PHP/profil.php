@@ -43,7 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <form action="account.php" method="post" class="login-form"> <!-- Ajoutez la classe login-form pour appliquer les styles -->
         <br />
         <input name="logout" type="submit" value="Se déconnecter">
+</form>
+
+<section class="theme">
+    <form action="./includes/head_.php" method="post">
+        <input type="submit" name ="dark" value="Light">
+        <input type="submit" name="light" value="Dark">
     </form>
+</section>
 
 <?php include('./includes/footer_.php'); ?>
 

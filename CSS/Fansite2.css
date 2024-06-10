@@ -1,0 +1,570 @@
+body {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgb(226, 226, 226);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: black;
+}
+
+.container {
+    position: relative;
+}
+
+
+
+
+
+
+/* HEADER */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid none;
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+
+nav img {
+    padding: 10px;
+    width:12vw ;
+}
+
+.headerList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.headerList ul {
+    display: none; /* Cacher les sous-menus par défaut */
+    position: absolute; /* Positionner les sous-menus de manière absolue */
+    background-color: white; /* Couleur de fond des sous-menus */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.headerList li:hover > ul {
+    display: block; /* Afficher les sous-menus lorsque l'utilisateur survole l'élément parent */
+}
+
+.headerList li {
+    position: relative;   
+}
+
+.headerList li ul li {
+    display: block;
+}
+
+
+
+.firstList {
+    padding: 10px 20px; /* Définir la position relative pour les éléments parents */
+    position: relative;
+}
+
+
+.firstList:hover {
+    text-decoration: underline;
+}
+
+
+.txt-hader {
+    padding: 0.1px;
+    margin: 0;
+}
+
+
+nav a {
+    color: black;
+}
+
+nav a:hover {
+    color: #FEA2E7;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    margin: 0 1.5vw;
+}
+
+.headerMessageContainer {
+    margin-right: 10px; /* Ajustez la marge selon vos besoins */
+}
+
+.characterLogo {
+    width: 2vw;
+    height: 2vw;
+    transition: fill 0.3s; /* Transition fluide pour la couleur */
+
+}
+
+
+
+/* HEADER */
+
+
+
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.both-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageus {
+    width: 49vw;
+    height: auto;
+}
+
+
+.imagefr {
+    width: 50vw;
+    height: auto;
+}
+
+.left-side,
+.right-side {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.left-side:hover .overlay,
+.right-side:hover .overlay {
+    opacity: 1;
+}
+
+.hover-imagefr,
+.hover-imageus {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 60px;
+    font-style: italic;
+    cursor: default;
+}
+
+h1:hover {
+    color: #FEA2E7;
+}
+
+
+/* PAGE FR ET US */
+
+
+.radius-photos {
+    text-align: center;
+}
+
+
+.first-line-fr, .second-line-fr {
+    display: flex;
+    justify-content: space-between  ;
+    margin-bottom: 20px;
+    padding: 2em 5em ;
+    color: black;
+}
+
+
+.freeze-corleone {
+    text-align: center;
+    margin: 0 10;
+}
+
+
+.freeze-corleone p {
+    margin-top: 5px;
+}
+
+.laylow {
+    text-align: center;
+    margin: 0 10;
+}
+
+
+.laylow p {
+    margin-top: 5px;
+}
+
+
+.radius-photos img {
+    border-radius: 100%;
+    width: 200px;
+    height: auto;
+}
+
+/* PAGE FR ET US */
+
+
+
+/* PAGE NEWS */
+.bloc-actu {
+    margin-bottom: 2vw;
+    margin-top: 5vw;
+}
+
+.bloc-actu img {
+    transition: transform 0.3s ease; /* Ajout de transition pour un effet de survol fluide */
+    border-radius: 10%;
+    width: 350px;
+    height:auto;
+    box-shadow: 5px 5px 10px white;
+}
+
+.bloc-actu img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+}
+
+
+.bloc:hover {
+    color: #FEA2E7;
+}
+
+.first-line-news, .second-line-news {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: black;
+}
+
+
+.bloc {
+    border: solid white;
+    background-color: white;
+    border-radius: 10%;
+    padding: 20px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.videos {
+    text-align: center;
+    color: black;
+    font-size: 35px;
+    margin: 60px 0;
+    width: 100%;
+    height: auto;
+}
+/* PAGE NEWS */
+
+
+/* PAGE FORMULAIRE */
+.formulaire {
+    border: solid white;
+    background-color: white;
+    margin: 50px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+h2 {
+    text-align: left;
+    margin: 20px 40px;
+}
+
+.sujet {
+    text-align: left;
+    margin: 20px 40px;
+}
+
+.sujet select {
+    padding: 5px 15px;    
+}
+
+
+.message {
+    padding-left: 5px ;
+    padding-right: 300px ;
+    padding-bottom: 200px;
+    padding-top: 5px;
+}
+
+.first-line-contact {
+    display: flex;
+    justify-content: space-between; /* Pour aligner les éléments sur la ligne */
+    align-items: center; /* Pour centrer verticalement les éléments */
+    margin-bottom: 20px; /* Ajoute un espace en bas */
+}
+
+
+.first-line-contact input {
+    padding-left: 5px ;
+    padding-right: 300px ;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    justify-content: space-between;
+}
+
+
+.first-line-contact select{
+    padding-left: 5px ;
+    padding-right: 5px ;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+.first-line-contact input[type="text"],
+.first-line-contact select {
+    flex: 1; /* Pour que chaque champ prenne autant d'espace que possible */
+}
+
+.first-line-contact input[type="text"],
+.first-line-contact select {    
+    margin-left: 10px; /* Ajoute un espace entre chaque champ */
+}
+
+.message {
+    width: 60vw;
+    height: auto; /* Pour que le champ "Message" occupe toute la largeur */
+    resize: vertical; /* Permet le redimensionnement vertical de la zone de texte */
+}
+
+.second-line-contact {
+    display: flex;
+    justify-content: center;
+}
+
+.second-line-contact input {
+    padding-left: 5px ;
+    padding-right: 300px ;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    justify-content: space-between;
+}
+
+.formulaire-bottom {
+    text-align: center;
+}
+
+
+
+
+
+
+/* PAGE FORMULAIRE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.bloc-gris {
+    background: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    font-size: 14px;
+    color: black;
+    margin-top: 6vw;
+    margin-bottom: 0vw;
+}
+
+.column2 {
+    width: 100%;
+    margin:2em;
+}
+
+.logo-line img {
+    width: 3vw;
+    height: auto;
+    padding: 10px;
+    transition: transform 0.3s ease; /* Ajout de transition pour un effet de survol fluide */
+}
+
+/* Effet de survol pour les logos du footer */
+.logo-line img:hover {
+    transform: scale(1.2); /* Agrandit légèrement l'image au survol */
+}
+
+.logo-footer {
+    width:10%;
+    height:auto;
+}
+/* FOOTER */
+
+
+/* ACCOUNT */
+   
+
+.buttonAccount {
+    display: grid;
+    place-items: center;
+    height: 30vh;
+    margin: 3vw 0vw;
+    font-size: 16px;
+}
+
+
+.button_register {
+    border: solid none;
+    background-color: white;
+    padding: 1.5vw;
+    border-radius: 20px;
+}
+
+
+.button_login {
+    border: solid none;
+    background-color: white;
+    padding: 1.5vw;
+    border-radius: 20px;
+}
+
+.button_register:hover {
+    color: #FEA2E7;
+    }
+    
+    
+.button_login:hover {
+    color: #FEA2E7;
+}
+/* ACCOUNT */
+
+
+/* LOGIN */
+/* Link to home */
+
+
+/* Form styles */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.login-form h1 {
+    color: #FEA2E7;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+
+.login-form input[type="submit"]:hover {
+    background-color: white;
+    color: #FEA2E7;
+}
+
+.adminButton {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block; /* Changer de block à inline-block */
+    margin: 0 auto;
+    border: none; /* Ajuster pour éviter un éventuel problème de bordure */
+    background-color: white;
+    padding: 10px 20px; /* Ajuster les unités pour une meilleure lisibilité */
+    border-radius: 5px;
+}
+
+.adminButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+.adminButton:hover {
+    color: #FEA2E7;
+}
+
+
+/* LOGIN */
+
+
+/* REGISTER */
+
+.error-message {
+    color: red;
+    font-size: 17px;
+    /* Ajoutez d'autres styles selon vos préférences */
+}
+
+.alreadyLog {
+    color: #FEA2E7;
+    text-decoration: underline;
+    text-align: center;
+    display: block;
+    margin: 3vw 0;
+}
+
+.alreadyLog:hover {
+    color: black;
+    text-decoration: none;
+}
+/* REGISTER */
+
+/* PROFIL */
+
+
+/* PROFIL */

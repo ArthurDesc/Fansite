@@ -12,8 +12,6 @@
     <a class="button_register" href="./register.php">S'inscrire</a>
 </section>
 
-
-
 <?php include('./includes/footer_.php');?>
 </body>
 </html>
