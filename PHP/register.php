@@ -1,80 +1,58 @@
-<?php 
-$title = "S'inscrire"; // TITRE DE LA PAGE
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmPassword'];
+    $error_message = '';
 
-session_start();
-
-// CONNECTING TO DB
-// CHECKING IF THE METHOD IS POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') { // '?' SI VRAI ET ':' SI FAUSSE
-    $login = isset($_POST['login']) ? $_POST['login'] : '';
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
-    $confirm_password = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : '';
-    $mail = isset($_POST['mail']) ? $_POST['mail'] : '';
-
-    // Expression régulière pour valider l'adresse email
-    $pattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
-
-    if (!preg_match($pattern, $mail)) {
-        $error_message = "<p class='error-message'>*Adresse mail non valide</p>";
-    } elseif ($confirm_password !== $password) {
+    if ($password !== $confirmPassword) {
         $error_message = "Les mots de passe ne correspondent pas";
     } else {
-        $password = password_hash($password, PASSWORD_BCRYPT); // SECURISE LE MDP EN BCRYPT
-        $mysqli = mysqli_connect('localhost', 'root', '', 'rap_verse');
-        $error_message = "";
+        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+        $mysqli = mysqli_connect('localhost', 'root', '', 'livreor');
 
         if (!$mysqli) {
             die("Could not connect: " . mysqli_connect_error());
         }
 
-        // Préparer la requête SQL
-        $sql = "INSERT INTO users (login, mail, password) VALUES ('$login', '$mail', '$password')";
+        // Utilisation d'une requête préparée pour éviter les injections SQL
+        $stmt = $mysqli->prepare("INSERT INTO users (login, password) VALUES (?, ?)");
+        if ($stmt) {
+            $stmt->bind_param("ss", $login, $hashed_password);
+            $result = $stmt->execute();
 
-        // Exécuter la requête SQL
-        $result = mysqli_query($mysqli, $sql);
-
-
-
-        if ($result) {
-            header("Location: ./profil.php");
-            exit(); // Assurez-vous de quitter après la redirection
+            if ($result) {
+                header("Location: ./connexion.php");
+                exit();
+            } else {
+                $error_message = "Erreur lors de l'inscription: " . $stmt->error;
+            }
+            $stmt->close();
         } else {
-            $error_message = "Erreur lors de l'inscription:" . mysqli_error($mysqli);
+            $error_message = "Erreur lors de la préparation de la requête: " . $mysqli->error;
         }
 
-        // Fermer la connexion
         mysqli_close($mysqli);
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<?php include('./includes/head_.php'); ?>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
 <body>
-<?php include('./includes/header_.php'); ?>
-    <form action="register.php" method="post" class="login-form"> <!-- Ajoutez la classe login-form pour appliquer les styles -->
-        <h1>S'inscrire</h1>
-        <br />  
-        <input type="text" name="login" placeholder="Pseudo" required>
-        <br />
-        <input type="text" name="mail" placeholder="Adresse email" required>
-        <br />
+    <form action="inscription.php" method="post">
+        <input type="text" name="login" placeholder="Login" required>
         <input type="password" name="password" placeholder="Mot de passe" required>
-        <br />
-        <input type="password" name="confirm_password" placeholder="Confirmez votre mot de passe" required>
-        <br />
-        <input type="submit" value="S'inscrire">
-        <?php 
-        if (!empty($error_message)) {
-            echo "<p class='error-message'>" . $error_message . "</p>"; // Utilisez la classe error-message pour appliquer les styles d'erreur
-        }
-        ?>
+        <input type="password" name="confirmPassword" placeholder="Confirmer le mot de passe" required>
+        <button type="submit">S'inscrire</button>
     </form>
-    <a href="./login.php" class="alreadyLog">Vous êtes déjà inscrit ?</a>
-
-
-<?php include('./includes/footer_.php'); ?>
+    <?php if (!empty($error_message)) : ?>
+        <p><?php echo $error_message; ?></p>
+    <?php endif; ?>
 </body>
 </html>
-

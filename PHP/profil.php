@@ -37,10 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <?php include('./includes/header_.php'); ?>
 
 <h1>Profil</h1>
+
 <div class=adminButtonContainer>
 <?php if (!empty($adminButton)) { echo $adminButton; } ?> 
 </div>
+
+
 <form action="account.php" method="post" class="login-form"> <!-- Ajoutez la classe login-form pour appliquer les styles -->
+        <input name="edit" type="submit" value="Modifier mon profil">
         <br />
         <input name="logout" type="submit" value="Se déconnecter">
 </form>

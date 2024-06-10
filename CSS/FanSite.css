@@ -519,7 +519,7 @@ footer {
     text-decoration: none;
     text-align: center;
     display: inline-block; /* Changer de block à inline-block */
-    margin: 0 auto;
+    margin: 4vw auto;
     border: none; /* Ajuster pour éviter un éventuel problème de bordure */
     background-color: black;
     padding: 10px 20px; /* Ajuster les unités pour une meilleure lisibilité */
