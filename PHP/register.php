@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_message = "Les mots de passe ne correspondent pas";
     } else {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-        $mysqli = mysqli_connect('localhost', 'root', '', 'livreor');
+        include('./includes/_connect.php');
 
         if (!$mysqli) {
             die("Could not connect: " . mysqli_connect_error());

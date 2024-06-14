@@ -1,4 +1,5 @@
-<?php $title = "Contact";?>
+<?php 
+$title = "Contact";?>
 
 <!DOCTYPE html>
 <html lang="en">

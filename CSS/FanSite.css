@@ -9,18 +9,7 @@ body {
     width: 100%;
     color: white;
 }
-
-.container {
-    position: relative;
-}
-
-
-
-
-
-
 /* HEADER */
-
 
 nav {
     display: flex;
