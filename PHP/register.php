@@ -1,4 +1,8 @@
 <?php
+$title = "Inscription"; // TITRE DE LA PAGE
+
+include('./includes/_connect.php');
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $login = $_POST['login'];
     $password = $_POST['password'];
@@ -39,20 +43,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-</head>
+<?php include('./includes/head_.php'); ?>
+
 <body>
+<?php include('./includes/header_.php');?>
     <form action="inscription.php" method="post">
-        <input type="text" name="login" placeholder="Login" required>
+        <input type="text" class= name="login" placeholder="Login" required>
         <input type="password" name="password" placeholder="Mot de passe" required>
         <input type="password" name="confirmPassword" placeholder="Confirmer le mot de passe" required>
         <button type="submit">S'inscrire</button>
     </form>
+
+    <!-- AFFICHE MESSAGE D'ERREUR SI BESOIN -->
     <?php if (!empty($error_message)) : ?>
         <p><?php echo $error_message; ?></p>
     <?php endif; ?>
+    <?php include('./includes/footer_.php');?>
+
 </body>
 </html>

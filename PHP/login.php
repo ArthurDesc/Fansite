@@ -14,9 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Expression régulière pour valider l'adresse email
 
     include('./includes/_connect.php');
-        if (!$mysqli) {
-            die("Could not connect: " . mysqli_connect_error());
-        }
 
         
 

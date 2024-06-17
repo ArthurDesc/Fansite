@@ -11,7 +11,7 @@
               <a href="https://www.twitch.tv/derroce_" target="_blank"><img src="../IMAGE/4590799_circle_logo_media_network_social_icon.png" alt=""></a>
             </div>
             
-            <p>Infos & Pratiques</p>
+            <a href="./contact.php"><p>Nous contacter</p></a>
             
             <img class="logo-footer" src="/fansite/Image/rap verse 2.png" alt="logo-plateforme">
           </div>

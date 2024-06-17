@@ -1,5 +1,7 @@
 <?php
-$style="<link rel='stylesheet' href='/Fansite/CSS/FanSite.css'>";
+$timestamp = time(); // obtenir le timestamp actuel
+$style = "<link rel='stylesheet' href='../CSS/FanSite.css?v=$timestamp'>"; // ajouter le timestamp comme paramètre de version
+
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

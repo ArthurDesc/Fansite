@@ -1,5 +1,6 @@
 <?php $title = "Rap US";?>
-
+<!DOCTYPE html>
+</html>
 <html lang="en">
 <?php include('./includes/head_.php'); ?>
 
