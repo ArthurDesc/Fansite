@@ -76,9 +76,9 @@
                 </div>
                 
                 <div class="videos">
-                    <p><h2>Drake répond au clash de Kendrick Lamar</h2></p>
+                    <p><h1>Drake répond au clash de Kendrick Lamar</h1></p>
                     <video controls>
-                        <source src="../IMAGE/y2mate.com - DRAKE  FAMILY MATTERS_480p.mp4">
+                        <source class="drake_video" src="../IMAGE/y2mate.com - DRAKE  FAMILY MATTERS_480p.mp4">
                     </video>
                 </div>
                 
